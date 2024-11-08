@@ -1,0 +1,114 @@
+/* Fuente estilo pixel para un toque retro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+h1 {
+    color: #3b4cca;
+    text-shadow: 1px 1px 2px #2c2c2c;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Contenedor de la lista de Pokémon */
+#pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    align-items: center; /* Centra las tarjetas verticalmente */
+    margin: 20px;
+    padding: 0 10px;
+    gap: 20px; /* Añadir espacio entre las tarjetas */
+}
+
+/* Tarjetas de Pokémon */
+.pokemon {
+    background-color: #ffffff;
+    border: 2px solid #3b4cca;
+    border-radius: 8px;
+    width: 150px; /* Tamaño fijo para las tarjetas */
+    height: 250px; /* Altura fija para mantener consistencia */
+    margin: 15px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para distribuir el contenido uniformemente */
+    align-items: center; /* Centra el contenido dentro de la tarjeta */
+}
+
+/* Efecto hover de la tarjeta */
+.pokemon:hover {
+    transform: translateY(-6px);
+    border-color: #cc0000;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen de Pokémon */
+.pokemon img {
+    width: 100px;
+    height: 100px; /* Mantener la imagen de Pokémon en un tamaño consistente */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+    margin-top: 10px;
+}
+
+/* Nombre del Pokémon */
+.pokemon-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3b4cca;
+    margin: 10px 0 5px;
+}
+
+/* Tipos del Pokémon */
+.pokemon-types {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Contenedor de estadísticas de Pokémon */
+.pokemon-stats {
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #3b4cca;
+    border-radius: 6px;
+    padding: 8px;
+    margin-top: 8px;
+    text-align: center;
+    display: grid;
+    gap: 5px;
+}
+
+/* Estilo de cada estadística individual */
+.pokemon-stat {
+    display: flex;
+    justify-content: space-between;
+    color: #ffdd57;
+    font-weight: bold;
+}
+
+/* Estilo para el contenedor de estrellas cuando el Pokémon es shiny */
+.shiny-stars {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 16px;
+    color: gold; /* Color dorado para las estrellas */
+    pointer-events: none; /* Evitar que interfiera con el clic */
+}
+
+/* Asegúrate de que los Pokémon shiny tengan un contenedor posicionado */
+.pokemon.shiny {
+    position: relative;
+}
